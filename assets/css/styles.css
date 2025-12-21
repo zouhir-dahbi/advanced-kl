@@ -1,0 +1,208 @@
+/* Custom Styles for Advance Keys & Locks */
+
+/* Navigation Links */
+.nav-link {
+    @apply text-gray-300 font-medium hover:text-primary transition-colors relative;
+}
+
+.nav-link.active {
+    @apply text-primary;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    @apply w-full;
+}
+
+.nav-link-mobile {
+    @apply text-gray-300 font-medium hover:text-primary transition-colors py-2;
+}
+
+.nav-link-mobile.active {
+    @apply text-primary;
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg shadow-primary/25;
+}
+
+.btn-secondary {
+    @apply bg-white text-dark font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg;
+}
+
+.btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300;
+}
+
+.btn-outline-white {
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-dark transition-all duration-300;
+}
+
+/* Service Cards */
+.service-card {
+    @apply bg-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-300;
+}
+
+/* Light section service cards */
+.service-card-light {
+    @apply bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300;
+}
+
+/* Area Tags */
+.area-tag {
+    @apply bg-dark border border-white/10 text-gray-300 px-4 py-2 rounded-full text-sm hover:border-primary hover:text-primary transition-colors cursor-default;
+}
+
+.area-tag-light {
+    @apply bg-gray-100 border border-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm hover:border-primary hover:text-primary transition-colors cursor-default;
+}
+
+/* Form Inputs - Light Theme */
+.form-input-light {
+    @apply w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300;
+}
+
+.form-label-light {
+    @apply block text-sm font-semibold text-gray-700 mb-2;
+}
+
+/* Form Inputs - Dark Theme */
+.form-input {
+    @apply w-full bg-dark-light border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-300 mb-2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+/* Scroll animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Service Detail Cards */
+.service-detail-card {
+    @apply bg-dark-light rounded-xl p-6 border border-white/5 hover:border-primary/30 transition-all duration-300;
+}
+
+.service-detail-card-light {
+    @apply bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-lg hover:border-primary/30 transition-all duration-300;
+}
+
+/* City Cards */
+.city-card {
+    @apply bg-dark-light rounded-xl p-6 border border-white/5 hover:border-primary/30 hover:transform hover:scale-105 transition-all duration-300 cursor-default;
+}
+
+.city-card-light {
+    @apply bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-lg hover:border-primary/30 hover:transform hover:scale-105 transition-all duration-300 cursor-default;
+}
+
+/* Page Header */
+.page-header {
+    @apply pt-16 pb-16 bg-dark-light relative overflow-hidden;
+    margin-top: 96px;
+}
+
+.page-header::before {
+    content: '';
+    @apply absolute inset-0 opacity-5;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DC2626' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    @apply bg-dark-light rounded-xl p-8 border border-white/5;
+}
+
+/* Feature list items */
+.feature-item {
+    @apply flex items-center text-gray-300 py-2;
+}
+
+.feature-item::before {
+    content: '';
+    @apply w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0;
+}
+
+.feature-item-light {
+    @apply flex items-center text-gray-700 py-2;
+}
+
+.feature-item-light::before {
+    content: '';
+    @apply w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .font-display {
+        letter-spacing: 0.02em;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background-color: #DC2626;
+    color: white;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #DC2626;
+    outline-offset: 2px;
+}
+
+/* Hide focus outline for mouse users */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}

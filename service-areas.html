@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advance Keys & Locks LLC serves the entire DMV area including Washington D.C., Maryland, and Virginia. Fast locksmith service in your area.">
+    <title>Service Areas | Advance Keys & Locks LLC</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC2626',
+                        'primary-dark': '#B91C1C',
+                        dark: '#0a0a0a',
+                        'dark-light': '#1a1a1a',
+                    },
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'body': ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-dark text-white font-body" x-data="{ mobileMenuOpen: false }">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-white/10">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/advance-kl-logo.png" alt="Advance Keys & Locks" class="h-12 md:h-14 w-auto">
+                    <div class="hidden sm:block">
+                        <span class="font-display text-xl md:text-2xl tracking-wide">ADVANCE <span class="text-primary">KEYS & LOCKS</span></span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="service-areas.html" class="nav-link active">Service Areas</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="tel:8262020852" class="flex items-center text-primary font-semibold hover:text-white transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        (826) 202-0852
+                    </a>
+                    <a href="contact.html" class="btn-primary">Get a Quote</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-white p-2">
+                    <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-show="mobileMenuOpen" x-transition class="lg:hidden mt-4 pb-4 border-t border-white/10 pt-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="nav-link-mobile">Home</a>
+                    <a href="services.html" class="nav-link-mobile">Services</a>
+                    <a href="service-areas.html" class="nav-link-mobile active">Service Areas</a>
+                    <a href="about.html" class="nav-link-mobile">About Us</a>
+                    <a href="blog.html" class="nav-link-mobile">Blog</a>
+                    <a href="contact.html" class="nav-link-mobile">Contact</a>
+                    <a href="tel:8262020852" class="btn-primary text-center mt-4">Call (826) 202-0852</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="font-display text-5xl md:text-6xl mb-4">Service <span class="text-primary">Areas</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl">
+                Proudly serving the Washington D.C., Maryland, and Virginia metropolitan area
+            </p>
+        </div>
+    </section>
+    
+    <!-- Service Area Intro -->
+    <section class="py-16 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-display text-4xl md:text-5xl mb-6">
+                    Serving the Entire <span class="text-primary">DMV Area</span>
+                </h2>
+                <p class="text-gray-400 text-lg mb-8">
+                    Advance Keys & Locks LLC provides fast, reliable locksmith services throughout the Washington D.C., Maryland, and Virginia metropolitan area. Whether you're in the heart of the nation's capital or the surrounding suburbs, our mobile locksmith team is ready to assist you with all your residential, commercial, and automotive locksmith needs.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-dark-light border border-white/10 rounded-lg px-6 py-4 text-center">
+                        <div class="font-display text-3xl text-primary">DC</div>
+                        <div class="text-gray-400 text-sm">Washington D.C.</div>
+                    </div>
+                    <div class="bg-dark-light border border-white/10 rounded-lg px-6 py-4 text-center">
+                        <div class="font-display text-3xl text-primary">MD</div>
+                        <div class="text-gray-400 text-sm">Maryland</div>
+                    </div>
+                    <div class="bg-dark-light border border-white/10 rounded-lg px-6 py-4 text-center">
+                        <div class="font-display text-3xl text-primary">VA</div>
+                        <div class="text-gray-400 text-sm">Virginia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Washington D.C. -->
+    <section class="py-16 bg-dark-light">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h3 class="font-display text-3xl md:text-4xl mb-4">
+                    <span class="text-primary">Washington D.C.</span>
+                </h3>
+                <p class="text-gray-400 max-w-3xl">
+                    We provide comprehensive locksmith services throughout the District of Columbia, from Capitol Hill to Georgetown and everywhere in between.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Downtown DC</h4>
+                    <p class="text-gray-400 text-sm">Federal Triangle, Penn Quarter</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Capitol Hill</h4>
+                    <p class="text-gray-400 text-sm">Eastern Market, Navy Yard</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Georgetown</h4>
+                    <p class="text-gray-400 text-sm">Foggy Bottom, West End</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Dupont Circle</h4>
+                    <p class="text-gray-400 text-sm">Adams Morgan, U Street</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Maryland -->
+    <section class="py-16 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h3 class="font-display text-3xl md:text-4xl mb-4">
+                    <span class="text-primary">Maryland</span>
+                </h3>
+                <p class="text-gray-400 max-w-3xl">
+                    Our service area extends throughout Montgomery County, Prince George's County, and surrounding Maryland communities.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Bethesda</h4>
+                    <p class="text-gray-400 text-sm">Montgomery County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Rockville</h4>
+                    <p class="text-gray-400 text-sm">Montgomery County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Silver Spring</h4>
+                    <p class="text-gray-400 text-sm">Montgomery County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Gaithersburg</h4>
+                    <p class="text-gray-400 text-sm">Montgomery County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Germantown</h4>
+                    <p class="text-gray-400 text-sm">Montgomery County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">College Park</h4>
+                    <p class="text-gray-400 text-sm">Prince George's County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Bowie</h4>
+                    <p class="text-gray-400 text-sm">Prince George's County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Laurel</h4>
+                    <p class="text-gray-400 text-sm">Prince George's County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Hyattsville</h4>
+                    <p class="text-gray-400 text-sm">Prince George's County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Waldorf</h4>
+                    <p class="text-gray-400 text-sm">Charles County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Upper Marlboro</h4>
+                    <p class="text-gray-400 text-sm">Prince George's County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Annapolis</h4>
+                    <p class="text-gray-400 text-sm">Anne Arundel County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Columbia</h4>
+                    <p class="text-gray-400 text-sm">Howard County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Ellicott City</h4>
+                    <p class="text-gray-400 text-sm">Howard County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Frederick</h4>
+                    <p class="text-gray-400 text-sm">Frederick County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Greenbelt</h4>
+                    <p class="text-gray-400 text-sm">Prince George's County</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Virginia -->
+    <section class="py-16 bg-dark-light">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h3 class="font-display text-3xl md:text-4xl mb-4">
+                    <span class="text-primary">Virginia</span>
+                </h3>
+                <p class="text-gray-400 max-w-3xl">
+                    We serve Northern Virginia communities including Arlington, Fairfax, Alexandria, and the surrounding areas.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Arlington</h4>
+                    <p class="text-gray-400 text-sm">Arlington County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Alexandria</h4>
+                    <p class="text-gray-400 text-sm">City of Alexandria</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Falls Church</h4>
+                    <p class="text-gray-400 text-sm">City of Falls Church</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">McLean</h4>
+                    <p class="text-gray-400 text-sm">Fairfax County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Reston</h4>
+                    <p class="text-gray-400 text-sm">Fairfax County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Tysons</h4>
+                    <p class="text-gray-400 text-sm">Fairfax County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Fairfax</h4>
+                    <p class="text-gray-400 text-sm">City of Fairfax</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Vienna</h4>
+                    <p class="text-gray-400 text-sm">Fairfax County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Herndon</h4>
+                    <p class="text-gray-400 text-sm">Fairfax County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Manassas</h4>
+                    <p class="text-gray-400 text-sm">City of Manassas</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Woodbridge</h4>
+                    <p class="text-gray-400 text-sm">Prince William County</p>
+                </div>
+                <div class="city-card">
+                    <h4 class="font-semibold text-lg mb-1">Leesburg</h4>
+                    <p class="text-gray-400 text-sm">Loudoun County</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Don't See Your Area -->
+    <section class="py-16 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="font-display text-3xl md:text-4xl mb-4">
+                    Don't See Your <span class="text-primary">City?</span>
+                </h3>
+                <p class="text-gray-400 text-lg mb-8">
+                    We're always expanding our service area. If you don't see your location listed, give us a call. We may still be able to help you with your locksmith needs.
+                </p>
+                <a href="contact.html" class="btn-primary inline-flex items-center">
+                    Contact Us
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="assets/images/AdobeStock_1656356509.jpeg" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-display text-4xl md:text-5xl mb-4 text-white">Need a Locksmith in Your Area?</h2>
+                <p class="text-xl text-white/90 mb-8">
+                    Our mobile locksmith team is ready to serve you anywhere in the DMV. Fast response, professional service.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:8262020852" class="bg-white text-primary font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        (826) 202-0852
+                    </a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-colors text-lg">
+                        Request Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark py-16 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Logo & About -->
+                <div class="md:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <img src="assets/images/advance-kl-logo.png" alt="Advance Keys & Locks" class="h-12 w-auto">
+                        <span class="font-display text-lg">ADVANCE <span class="text-primary">KEYS & LOCKS</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm">
+                        Professional locksmith services for residential, commercial, and automotive needs throughout the DMV area.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display text-xl mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="service-areas.html" class="text-gray-400 hover:text-primary transition-colors">Service Areas</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="font-display text-xl mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#residential" class="text-gray-400 hover:text-primary transition-colors">Residential</a></li>
+                        <li><a href="services.html#commercial" class="text-gray-400 hover:text-primary transition-colors">Commercial</a></li>
+                        <li><a href="services.html#automotive" class="text-gray-400 hover:text-primary transition-colors">Automotive</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-display text-xl mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:8262020852" class="hover:text-primary transition-colors">(826) 202-0852</a>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:advancekeys@outlook.com" class="hover:text-primary transition-colors">advancekeys@outlook.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Advance Keys & Locks LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
